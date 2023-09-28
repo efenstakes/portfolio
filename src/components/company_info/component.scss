@@ -1,0 +1,60 @@
+@import '../../styles/commons';
+
+
+
+.company_info {
+    max-width: 560px;
+    width: 100%;
+    padding: 2rem 1rem;
+
+
+    @media screen and (min-width: 1200px) {
+        width: 640px;
+    }
+}
+
+
+.company_info__when {
+    font-style: italic;
+}
+
+.company_info__responsibilities {
+    padding: .6rem 0;
+
+    p {
+        font-weight: 500;
+    }
+}
+
+.company_info__responsibilities__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    margin-right: 1rem;
+
+    text-align: center;
+    font-style: italic;
+
+    background-color: lighten($PRIMARY_COLOR, 30);
+    background-image: linear-gradient(
+        10deg,
+        lighten($PRIMARY_COLOR, 10),
+        lighten($BLACK_COLOR, 10),
+    );
+}
+
+
+.company_info__tools {
+    overflow: hidden;
+}
+.company_info__chip {
+    background-color: $BLACK_COLOR;
+    color: $WHITE_COLOR;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
