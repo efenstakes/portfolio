@@ -55,7 +55,7 @@ const Welcome = ({ scrollToCompanies, }: WelcomeProps) => {
 
             {/* name */}
             <p className="welcome__text text_7 su_9 welcome__my_name">
-                And I'm Felix
+                And I&apos;m Felix
             </p>
 
             <div
