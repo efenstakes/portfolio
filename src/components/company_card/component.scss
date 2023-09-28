@@ -1,0 +1,25 @@
+@import '../../styles/commons';
+
+
+.company_card {
+    position: relative;
+
+    width: 100%;
+    
+}
+
+.company_card__image_container {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.company_card__image_container__image {
+    object-fit: cover;
+    width: 100%;
+    height: 10rem;
+
+    border-radius: 20px;
+}
