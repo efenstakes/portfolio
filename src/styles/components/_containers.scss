@@ -1,0 +1,391 @@
+@import '../abstract/colors';
+@import '../abstract/mixins';
+@import '../base/typography';
+@import '../abstract/variables';
+
+
+
+.section {
+    min-height: 90vh;
+
+    @media screen and (min-width: 768px) {
+        min-height: 100vh;
+    }
+}
+
+
+// paper - element with drop shadow
+.paper_sm {
+    box-shadow: $BOX_SHADOW_SM;
+
+    &:hover {
+        box-shadow: $BOX_SHADOW_HOVER_SM;
+    }
+}
+.paper {
+    box-shadow: $BOX_SHADOW_MD;
+
+    &:hover {
+        box-shadow: $BOX_SHADOW_HOVER_MD;
+    }
+}
+.paper_lg {
+    box-shadow: $BOX_SHADOW_LG;
+
+    &:hover {
+        box-shadow: $BOX_SHADOW_HOVER_LG;
+    }
+}
+
+
+// padded container
+.padded_container_xl {
+    @media screen and (max-width: 560px) {
+        padding: 0 20px;
+    }
+    @media screen and (min-width: 560px) {
+        padding: 0 10vw;
+    }
+    @media screen and (min-width: 880px) {
+        padding: 0 20vw;
+    }
+    @media screen and (min-width: 1080px) {
+        padding: 0 25vw;
+    }
+}
+.padded_container_lg {
+    @media screen and (max-width: 560px) {
+        padding: 0 16px;
+    }
+    @media screen and (min-width: 560px) {
+        padding: 0 8vw;
+    }
+    @media screen and (min-width: 880px) {
+        padding: 0 12vw;
+    }
+    @media screen and (min-width: 1080px) {
+        padding: 0 20vw;
+    }
+}
+.padded_container {
+    @media screen and (max-width: 560px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    @media screen and (min-width: 560px) {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    @media screen and (min-width: 880px) {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+    @media screen and (min-width: 1080px) {
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+}
+.padded_container_sm {
+    @media screen and (max-width: 560px) {
+        padding: 0 8px;
+    }
+    @media screen and (min-width: 560px) {
+        padding: 0 2vw;
+    }
+    @media screen and (min-width: 880px) {
+        padding: 0 4vw;
+    }
+    @media screen and (min-width: 1080px) {
+        padding: 0 6vw;
+    }
+}
+
+.animation_container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.background_image_container {
+    background-position: 'center';
+    background-size: cover;
+}
+
+.gradial_bg_container {
+    perspective: 200px;
+    perspective-origin: center bottom; // x, y
+
+    background-image: radial-gradient(
+        circle, 
+        rgba(242, 184, 75, .4), 
+        rgba(251, 101, 66, .3),
+        rgba(30, 30, 30, .0),
+        rgba(30, 30, 30, .0)
+    );
+    background-position-y: bottom;
+
+    backdrop-filter: blur(20px);
+    
+
+    background-size: 50%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    transition: 600ms;
+    
+
+    &:hover {
+        background-image: radial-gradient(
+            circle, 
+            rgba(242, 184, 75, .5), 
+            rgba(251, 101, 66, .3),
+            rgba(30, 30, 30, .0),
+            rgba(30, 30, 30, .0)
+        );
+        background-size: 60%;
+        
+        @media screen and (max-width: 800px) {
+            background-size: 100%;
+        // }
+        // @media screen and (max-width: 560px) {
+            background-position: center center;
+            // background-size: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        // background-image: none;
+        background-size: 100%;
+    }
+
+    @media screen and (max-width: 600px) {
+        // background-position: center center;
+        // background-size: 100%;
+        background-image: radial-gradient(
+            circle, 
+            rgba(242, 184, 75, .3), 
+            rgba(251, 101, 66, .2),
+            rgba(30, 30, 30, .0),
+            rgba(30, 30, 30, .0)
+        );
+    }
+}
+
+.animated_image_container {
+    overflow: hidden;
+}
+.animated_image_container__image {
+    transition: 300ms;
+}
+.animated_image_container__image:hover {
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+
+// pagination wrapper
+.pagination__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+
+.app__carousel {
+    position: relative;
+}
+
+.drawer {
+    // padding: 2rem 0 0 1rem;
+    position: relative;
+}
+    
+// style app drawers 
+.drawer_full, .drawer_100 {
+    // @extend .drawer;
+    min-width: 100vw;
+}
+.drawer_xl, .drawer_80 {
+    // @extend .drawer;
+    min-width: 80vw;
+}
+.drawer_lg, .drawer_60 {
+    // @extend .drawer;
+    min-width: 60vw;
+}
+.drawer, .drawer_40 {
+    // @extend .drawer;
+    min-width: 40vw;
+}
+.mini_drawer, .drawer_36 {
+    // @extend .drawer;
+    min-width: 36vw;
+}
+
+.drawer_content_wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+.drawer_action {
+    margin: .5rem 1rem;
+    padding: 1rem;
+
+    background-color: lighten($PRIMARY_COLOR, $amount: 40);
+
+    font-weight: 500;
+}
+
+
+// form wrappers
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // background-color: pink;
+    height: 100%;
+    
+    @media screen and (min-width: 900px) {
+        min-height: 88vh;
+    }
+}
+
+
+
+.clickable {
+    cursor: pointer;
+}
+
+
+
+.absolute {
+    position: absolute;
+}
+
+.full_width_absolute, .absolute_100 {
+    @extend .absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+
+// add beauty to pages & sections
+
+.underlay {
+    @extend .absolute;
+    border-radius: 50%;
+    
+    width: 18vw;
+    height: 18vw;
+
+    z-index: -20;
+}
+
+.underlay_primary_gradient {
+    background-image: $PRIMARY_GRADIENT;
+}
+.underlay_secondary_gradient {
+    background-image: $SECONDARY_GRADIENT_ALT;
+}
+
+.underlay_1 {
+    @extend .underlay;
+
+    top: -10%;
+    left: -10%;
+    
+    $gradient: underlay_primary_gradient, underlay_secondary_gradient;
+    $random_index: random($limit: 2);
+    background-image: #{"."nth($gradient, $random_index)};
+}
+
+.underlay_2 {
+    @extend .underlay;
+    top: -10%;
+    left: -10%;
+
+    width: 15vw;
+    height: 15vw;
+    
+    $gradient: underlay_primary_gradient, underlay_secondary_gradient;
+    $random_index: random($limit: 2);
+    background-image: #{"."nth($gradient, $random_index)};
+}
+
+.underlay_3 {
+    @extend .underlay;
+
+    top: -10%;
+    left: -10%;
+
+    width: 25vw;
+    height: 25vw;
+    
+    $gradient: underlay_primary_gradient, underlay_secondary_gradient;
+    $random_index: random($limit: 2);
+    background-image: #{"."nth($gradient, $random_index)};
+}
+
+.underlay_4 {
+    @extend .underlay;
+    bottom: -4%;
+    right: -3%;
+
+    width: 20vw;
+    height: 20vw;
+    
+    $gradient: underlay_primary_gradient, underlay_secondary_gradient;
+    $random_index: random($limit: 2);
+    background-image: #{"."nth($gradient, $random_index)};
+}
+
+.underlay_5 {
+    @extend .underlay;
+    bottom: 0%;
+    left: -10%;
+
+    width: 30vw;
+    height: 30vw;
+    
+    $gradient: underlay_primary_gradient, underlay_secondary_gradient;
+    $random_index: random($limit: 2);
+    background-image: #{"."nth($gradient, $random_index)};
+}
+
+.underlay_6 {
+    @extend .underlay;
+    top: 90%;
+    left: -5%;
+
+    width: 15vw;
+    height: 15vw;
+    
+    $gradient: underlay_primary_gradient, underlay_secondary_gradient;
+    $random_index: random($limit: 2);    
+    background-image: #{"."nth($gradient, $random_index)};
+
+}
+
+.underlayed {
+    @extend .underlay;
+
+    top: random($limit: 100) + '%';
+    left: random($limit: 100) + '%';
+
+    $dimension: random($limit: 30) + vw;
+    width: $dimension;
+    height: $dimension;
+
+    $gradient: underlay_primary_gradient, underlay_secondary_gradient;
+    $random_index: random($limit: 2);
+    background-image: #{"."nth($gradient, $random_index)};
+
+    background-color: red;
+}

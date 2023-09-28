@@ -1,0 +1,43 @@
+
+
+.appbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 15;
+}
+
+.appbar_sm {
+    @extend .appbar;
+
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    max-height: 56px;
+}
+
+.appbar_md {
+    @extend .appbar;
+    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-height: 64px;
+}
+
+.appbar_lg {
+    @extend .appbar;
+    
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    max-height: 72px;
+}
+
+
+.appbar_action {
+    margin: 0 2rem;
+
+    @media screen and (max-width: 600px) {
+        margin: 0 1.2rem;
+    }
+}

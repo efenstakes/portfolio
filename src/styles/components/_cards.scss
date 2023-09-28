@@ -1,0 +1,36 @@
+@import '../abstract/variables';
+@import '../abstract/colors';
+
+
+.outer_card_container {
+    position: relative;
+    
+    width: 100%;
+    min-width: 200px;
+
+    padding: 0 1rem 0 0;
+    margin: 1rem 0;
+
+    user-select: none;
+}
+
+
+.inline_card_container {
+    position: relative;
+
+    cursor: pointer;
+
+    height: 40vh;
+    width: 100%;
+    padding: 0 .5rem;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border-radius: $BORDER_RADIUS;
+
+    color: wheat;
+    
+    @extend .background_image_container;
+}

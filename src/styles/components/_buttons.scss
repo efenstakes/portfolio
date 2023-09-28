@@ -1,0 +1,59 @@
+@import '../abstract/colors';
+
+
+
+.button {
+    text-transform: none;
+    border-radius: 80px;
+    padding: .72rem 1.6rem;
+
+    min-width: 180px;
+    max-width: 320px;
+    max-height: 56px;
+
+    @media screen and (min-width: 800px) {
+        font-size: 1rem;
+    }
+
+    @media screen and (min-width: 1400px) {
+        font-size: 1.2rem;
+        padding: .8rem 1.8rem;
+    }
+}
+
+
+.button_sm {
+    padding: .4rem .8rem;
+    
+    @media screen and (min-width: 800px) {
+        font-size: .72rem;
+    }
+
+    @media screen and (min-width: 1400px) {
+        font-size: .9rem;
+        padding: .56rem 1rem;
+    }
+}
+
+
+.button_md {
+    padding: .64rem 1.2rem;
+
+    width: 300px;
+    
+    @media screen and (min-width: 800px) {
+        font-size: .9rem;
+        max-height: 80px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        font-size: 1.2rem;
+        padding: .72rem 1.32rem;
+    }
+}
+
+.primary_button {
+    @extend .button;
+
+    background-image: $PRIMARY_GRADIENT;
+}

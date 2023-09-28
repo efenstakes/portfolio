@@ -1,0 +1,102 @@
+@import '../abstract/colors';
+
+
+
+@mixin text-contrast( $n ) {
+    // $color-brightness: round((red($n)*299)+(green($n)*587)+(blue($n)*114)/1000);
+    // $light-color: round((red(#ffffff)*299)+(green(#ffffff)*587)+(blue(#ffffff)*114)/1000);
+
+    // @if abs($color-brightness) < ($light-color/2){
+    //     color: $WHITE_COLOR;
+    // } @else {
+    //     color: $BLACK_COLOR;
+    // }
+
+    $color-brightness: brightness($n);
+
+    @if $color-brightness > 50 {
+      color: $WHITE_COLOR;
+    } @else {
+      color: $BLACK_COLOR;
+    }
+}
+
+
+@mixin absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+@mixin build_gradient($deg: 36deg, $color1: $PRIMARY_COLOR, $color2: $SECONDARY_COLOR) {
+    background-image: linear-gradient(deg, $color1, $color2);
+}
+
+
+
+// animation based
+
+
+
+@mixin slide_down_mx($delay: 0ms, $duration: $standard_animation_duration) {
+    animation-name: slidedown;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+
+@mixin slide_up_mx($delay: 0ms, $duration: $standard_animation_duration) {
+    animation-name: slideup;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+
+@mixin slide_in_mx($delay: 0ms, $duration: $standard_animation_duration) {
+    animation-name: slidein;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+
+@mixin spread_out_mx($delay: 0ms, $duration: $standard_animation_duration) {
+    animation-name: slideout;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+}
+
+
+@mixin fade_mx($delay: 0ms, $duration: $standard_animation_duration) {
+    animation-name: fade;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+
+
+@mixin blink_mx($delay: 0ms, $duration: $standard_animation_duration) {
+    animation-name: blink;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+@mixin scale_mx($delay: 0ms, $duration: $standard_animation_duration) {
+    animation-name: scaler;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}

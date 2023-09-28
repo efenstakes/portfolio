@@ -1,0 +1,274 @@
+@import './mixins';
+
+
+$standard_animation_duration: 360ms;
+
+
+.slide_down_animator {
+    animation-name: slidedown;
+    animation-duration: $standard_animation_duration;
+}
+
+
+.slide_up_animator {
+    animation-name: slideup;
+    animation-duration: $standard_animation_duration;
+}
+
+.slide_up_animator {
+    animation-name: slidein;
+    animation-duration: $standard_animation_duration;
+}
+
+
+.spread_out_animator {
+    animation-name: spreadout;
+    animation-duration: $standard_animation_duration;
+}
+
+.fade_animator {
+    animation-name: fade;
+    animation-duration: $standard_animation_duration;
+}
+
+.scale_animator {
+    animation-name: scaler;
+    animation-duration: $standard_animation_duration;
+}
+
+
+.blink_animator {
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes spreadout {
+    from {
+        transform: scaleX(0.4);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scaler {
+    from {
+        transform: scale(0.1, 0.1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+
+@keyframes slidedown {
+    from {
+        transform: translateY(-80px); // 64
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideup {
+    from {
+        transform: translateY(80px); // 64
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slidein {
+    from {
+        transform: translateX(12rem) scaleY(.8); // 64
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+}
+
+
+@mixin content_loader {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 120%;
+    background-color: lightgray;
+    filter: opacity(0.2) blur(2px);
+    transition: 200ms;
+
+    animation-name: loading_content_kf;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    animation-iteration-count: infinite;  
+}
+
+@keyframes loading_content_kf {
+    from {
+        transform: translateX(-400px);
+    }
+    to {
+        transform: translateX(400px);
+    }
+}
+
+
+
+
+@keyframes shaker_kf {
+    0% {
+        transform: rotate(-20deg) scale(1.2);
+        color: wheat;
+    }
+    5% {
+        transform: rotate(20deg);
+    }
+    10% {
+        transform: rotate(-20deg) scale(1.1);
+        color: whitesmoke;
+    }
+    15% {
+        transform: rotate(20deg);
+    }
+    20% {
+        transform: rotate(0deg) scale(1.2);
+        color: whitesmoke;
+    }
+    30% {
+        transform: rotate(0deg) scale(1);
+        color: white;
+    }
+}
+
+
+@keyframes bounce_kf {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-4px);
+    }
+    75% {
+        transform: translateY(4px);
+    }
+    85% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    // to {
+    //     transform: translateY(-12px);
+    // }
+    // 0% {
+    //     transform: translateY(0);
+    // }
+    // 10% {
+    //     transform: translateY(-12px);
+    // }
+    // 20% {
+    //     transform: translateY(0);
+    // }
+    // 30% {
+    //     transform: translateY(-6px);
+    // }
+    // 40% {
+    //     transform: translateY(0);
+    // }
+    // 0% {
+    //     transform: translateY(0);
+    // }
+    // 10% {
+    //     transform: translateY(-8vh);
+    // }
+    // 20% {
+    //     transform: translateY(0);
+    // }
+    // 30% {
+    //     transform: translateY(-4vh);
+    // }
+    // 40% {
+    //     transform: translateY(0);
+    // }
+    // 0% {
+    //     transform: translateY(0);
+    // }
+    // 10% {
+    //     transform: translateY(-60px);
+    // }
+    // 20% {
+    //     transform: translateY(0);
+    // }
+    // 30% {
+    //     transform: translateY(-20px);
+    // }
+    // 40% {
+    //     transform: translateY(0);
+    // }
+}
+
+
+
+/*
+  common animations was 40ms
+*/
+
+@for $i from 1 to 100 {
+    .sd_#{$i} {
+        @include slide_down_mx($delay: calc( 0ms + calc(#{$i}*30ms) ));
+    }
+}
+
+
+@for $i from 1 to 100 {
+    .su_#{$i} {
+        @include slide_up_mx($delay: calc( 0ms + calc(#{$i}*30ms) ));
+    }
+}
+
+
+@for $i from 1 to 100 {
+    .si_#{$i} {
+        @include slide_in_mx($delay: calc( 0ms + calc(#{$i}*30ms) ));
+    }
+}
+
+
+@for $i from 1 to 100 {
+    .fd_#{$i} {
+        @include fade_mx($delay: calc( 0ms + calc(#{$i}*30ms) ), $duration: 600ms);
+    }
+}
+
+
+@for $i from 1 to 100 {
+    .sc_#{$i} {
+        @include scale_mx($delay: calc( 0ms + calc(#{$i}*30ms) ));
+    }
+}

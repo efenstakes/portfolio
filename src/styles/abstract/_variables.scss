@@ -1,0 +1,32 @@
+@import './colors';
+
+
+
+$BORDER_RADIUS_XL: 40px;
+$BORDER_RADIUS_LG: 32px;
+$BORDER_RADIUS: 20px;
+$BORDER_RADIUS_SM: 12px;
+
+
+$PRIMARY_GRADIENT: linear-gradient(to bottom right, $PRIMARY_COLOR, $SECONDARY_COLOR);
+$PRIMARY_GRADIENT_ALT: linear-gradient(to bottom right, $SECONDARY_COLOR, $PRIMARY_COLOR);
+
+$SECONDARY_GRADIENT: linear-gradient(to bottom right, $SECONDARY_COLOR, $TERTIARY_COLOR);
+$SECONDARY_GRADIENT_ALT: linear-gradient(to bottom right, $TERTIARY_COLOR, $SECONDARY_COLOR);
+
+$TEXT_INPUT_BACKGROUND_COLOR: lighten($BLACK_COLOR, 80);
+
+
+$BOX_SHADOW_MD: 0px 2px 20px .5px rgba(236, 202, 140, .5);
+$BOX_SHADOW_HOVER_MD:  0px 2px 20px .5px rgba(236, 202, 140, .5);
+
+$BOX_SHADOW_SM: 0px 1px 10px 0px wheat;
+$BOX_SHADOW_HOVER_SM:  0px 1px 10px .5px rgb(236, 202, 140);
+
+$BOX_SHADOW_LG: 0px 10px 10px 0px wheat;
+$BOX_SHADOW_HOVER_LG:  0px 10px 20px 2px rgb(236, 202, 140);
+
+
+
+
+$PRIMARY_FONT: Oswald;

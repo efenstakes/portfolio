@@ -1,0 +1,36 @@
+
+.chip {
+    @extend .row;
+    @extend .ma_center;
+    @extend .ca_center;
+}
+
+.chip_sm {
+    @extend .chip;
+    @extend .text_6;
+    
+    padding: .2rem .8rem;
+}
+
+.chip_md {
+    @extend .chip;
+    @extend .text_5;
+    
+    padding: .4rem 1.2rem;
+}
+
+.chip_lg {
+    @extend .chip;
+    @extend .text_3;
+    
+    padding: .6rem 1.6rem;
+}
+
+
+.chip_rounded {
+    border-radius: $BORDER_RADIUS_XL;
+}
+
+.chip_outlined {
+    background-color: transparent;
+}

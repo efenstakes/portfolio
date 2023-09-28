@@ -1,0 +1,285 @@
+
+// ** text ** //
+
+// title
+.title_1 {
+    font-size: 8rem;
+    font-weight: 900;
+    font-family: 'Oswald';
+
+    @media screen and (min-width: 700px) {
+        font-size: 10rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 12rem;
+    }
+}
+
+.title_2 {
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: 'Oswald';
+
+    @media screen and (min-width: 700px) {
+        font-size: 8rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 10rem;
+    }
+}
+.title_3 {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Oswald';
+
+    @media screen and (min-width: 700px) {
+        font-size: 6rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 8rem;
+    }
+}
+.title_4 {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Oswald';
+
+    @media screen and (min-width: 700px) {
+        font-size: 4rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 6rem;
+    }
+}
+.title_5 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Oswald';
+
+    @media screen and (min-width: 700px) {
+        font-size: 3.6rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 4.8rem;
+    }
+}
+
+.title_6 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    font-family: 'Oswald';
+
+    @media screen and (min-width: 700px) {
+        font-size: 3.2rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 4rem;
+    }
+}
+
+
+
+.text_1 {
+    font-size: 1.8rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: 2.4rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 3.2rem;
+    }
+}
+
+.text_2 {
+    font-size: 1.6rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: 2.0rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 2.8rem;
+    }
+}
+
+.text_3 {
+    font-size: 1.4rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 1.8rem;
+    }
+}
+
+.text_4 {
+    font-size: 1.2rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: 1.4rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 1.6rem;
+    }
+}
+
+.text_5 {
+    font-size: 1rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: 1.2rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 1.4rem;
+    }
+}
+
+.text_6 {
+    font-size: .8rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: 1rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 1.2rem;
+    }
+}
+
+.text_7 {
+    font-size: .72rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: .8rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 1rem;
+    }
+}
+
+.text_8 {
+    font-size: .56rem;
+
+    @media screen and (min-width: 700px) {
+        font-size: .6rem;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: .8rem;
+    }
+}
+
+
+.input_error_text {
+    margin-top: 2px;
+    margin-left: 2px;
+    font-size: .8em;
+    color: #ff1744;
+}
+
+
+// small text which acts as instructional
+.instructional_text {
+    font-size: .84rem;
+    font-weight: 500;
+}
+
+// small text which acts as instructional ** italicized
+.instructional_text__i {
+    font-style: italic;
+    @extend .input_error_text;
+}
+
+
+// small hint text which acts as secondary instructional
+.instructional_tertiary_text {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.instructional_tertiary_text__i {
+    font-style: italic;
+    @extend .instructional_tertiary_text;
+}
+
+
+.section_subtitle, .section_title {
+    // padding-left: 4vw;
+    
+    font-size: clamp(3rem, 3.2vw, 4.4vw);
+    font-weight: 900;
+    font-family: 'Oswald';
+
+    @media screen and (max-width: 600px) {
+        font-size: clamp(2.4rem, 2.8vw, 3.6vw);
+    }
+}
+
+.section_title {
+    font-size: clamp(3rem, 4.4vw, 5.6vw);
+    
+    // width: 50%;
+    display: inline-block;
+
+    background: -webkit-linear-gradient(120deg, $PRIMARY_COLOR, $SECONDARY_COLOR);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    transform: translateY(-1rem);
+    
+    @media screen and (max-width: 600px) {
+        font-size: clamp(2.8em, 4vw, 4.4vw);
+        transform: translateY(-.6rem);
+    }
+}
+
+.section_title__white {
+    font-family: Oswald;
+    font-size: clamp(3rem, 4.4vw, 5.6vw);
+    
+    // width: 50%;
+    display: inline-block;
+
+    color: $WHITE_COLOR;
+    
+    transform: translateY(-1rem);
+    
+    @media screen and (max-width: 600px) {
+        font-size: clamp(2.8em, 4vw, 4.4vw);
+        transform: translateY(-.6rem);
+    }
+}
+
+
+.clamped_text, .clipped_text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    line-clamp: 2;
+    -webkit-line-clamp: 2; 
+
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.clipped_text_sm {
+    @extend .clipped_text;
+    
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+}
+
+
+
+.italic {
+    font-style: italic;
+}
+
+.semi_bold {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.bolder {
+    font-weight: 800;
+}

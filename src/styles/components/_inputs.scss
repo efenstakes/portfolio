@@ -1,0 +1,22 @@
+@import '../abstract/variables';
+
+
+.input_sm {
+    padding: 1rem 1.2rem;
+    border-radius: $BORDER_RADIUS;
+
+    background-color: $TEXT_INPUT_BACKGROUND_COLOR;
+}
+
+@mixin input_sm($radius) {
+    @extend .input_sm;
+    border-radius: $radius;
+}
+
+.input_centered_placeholder::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.input_centered_placeholder::-moz-placeholder {
+    text-align: center;
+}
