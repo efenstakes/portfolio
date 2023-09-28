@@ -1,1 +1,31 @@
 @import '../../styles/commons';
+
+.skill_icon {
+    font-size: 2rem;
+}
+
+.skills_section {
+    color: $BLACK_COLOR;
+
+    margin-bottom: 6rem;
+}
+
+.skills_section_skills {
+
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 120px, 1fr ) );
+    gap: 2.5rem 1rem;
+}
+
+.skills_section__title {
+    text-align: center;
+}
+
+.skills_section__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: .5rem;
+}
