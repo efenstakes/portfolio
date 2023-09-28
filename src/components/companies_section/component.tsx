@@ -103,7 +103,7 @@ const CompaniesSection = () => {
     }, [ selectedCompany ])
 
     return (
-        <div className='padded_container companies_container'>
+        <div className='padded_container_sm companies_container'>
             
             {/* title */}
             <SectionTitle title="COMPANIES" />
