@@ -1,7 +1,17 @@
 @import '../../styles/commons';
 
+
+@mixin skill_card_switchables {
+    position: absolute;
+    top: 0%;
+
+    transition: 400ms;
+    transform: scale(0);
+    opacity: 0;
+}
+
 .skill_icon {
-    font-size: 2rem;
+    font-size: 2.8rem;
 }
 
 .skills_section {
@@ -23,9 +33,52 @@
 }
 
 .skills_section__card {
+    position: relative;
+    min-height: 80px;
+    // background-color: bisque;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
 
     gap: .5rem;
+
+    cursor: pointer;
+
+    &:hover .skills_section__card_proeffiency {
+        transform: scale(1);
+        opacity: 1;
+        // display: block;
+    }
+
+    &:hover .skills_section__card_icon {
+        transform: scale(0);
+        opacity: 0;
+        // display: none;
+    }
+}
+
+.skills_section__card_proeffiency {
+    @include skill_card_switchables();
+}
+
+.skills_section__card_icon {
+    @include skill_card_switchables();
+    transform: scale(1);
+    opacity: 1;
+}
+
+.skills_section__card__tool {
+    // position: absolute;
+    // bottom: 0;
+
+    bottom: 0;
+    text-align: center;
+}
+
+.MuiCircularProgress-circle  {
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke: $TERTIARY_COLOR;
 }

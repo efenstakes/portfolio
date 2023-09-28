@@ -1,11 +1,19 @@
+import React from 'react'
+
+import { Box, CircularProgress, CircularProgressProps, LinearProgress, Typography } from '@mui/material'
+
+import { SiSolidity, SiRust, SiElixir, SiTypescript, SiBabylondotjs, SiSwift, SiFlutter, SiDocker, SiFirebase, SiChai, SiMocha, SiGraphql, SiWebrtc, } from 'react-icons/si'
+import { FaHardHat, FaAws, FaGitAlt, } from 'react-icons/fa'
+import { BiAnchor, BiLogoPython, BiLogoReact, BiLogoJavascript, BiLogoCss3, } from 'react-icons/bi'
+import { TbBrandGolang, TbBrandNodejs, TbBrandNextjs, TbBrandThreejs, TbBrandReactNative, } from 'react-icons/tb'
+import { AiFillHtml5, } from 'react-icons/ai'
 
 // models
 import { Skill } from '../../models/skill'
-import SkillCard from '../skill_card/component'
 
 
 // components
-
+import VSpacer from '../v_spacer/component'
 
 const backend_img = '/assets/images/be.jpg'
 const frontend_img = '/assets/images/fr3.png'
@@ -14,19 +22,35 @@ const mobile_img = '/assets/images/mobile.jpeg'
 const devops_img = '/assets/images/devops.jpg'
 
 
-
+// styles
 import './component.scss'
-import { LinearProgress } from '@mui/material'
-
-import { SiSolidity, SiRust, SiElixir, SiTypescript, SiBabylondotjs, SiSwift, SiFlutter, SiDocker, SiFirebase, SiChai, SiMocha, SiGraphql, SiWebrtc, } from 'react-icons/si'
-import { FaHardHat, FaAws, FaGitAlt, } from 'react-icons/fa'
-import { BiAnchor, BiLogoPython, BiLogoReact, BiLogoJavascript, BiLogoCss3, } from 'react-icons/bi'
-import { TbBrandGolang, TbBrandNodejs, TbBrandNextjs, TbBrandThreejs, TbBrandReactNative, } from 'react-icons/tb'
-import { AiFillHtml5, } from 'react-icons/ai'
-import React from 'react'
-import VSpacer from '../v_spacer/component'
 
 
+function CircularProgressWithLabel(
+    props: CircularProgressProps & { value: number },
+  ) {
+    return (
+      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+        <CircularProgress variant="determinate" {...props} />
+        <Box
+          sx={{
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            position: 'absolute',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <h5><small>{`${Math.round(props.value)}%`}</small></h5>
+        </Box>
+      </Box>
+    );
+  }
+
+  
 const SkillsSection = () => {
     const toolIcons = new Map<string, React.ReactNode>([
         [ "Solidity", <SiSolidity className='skill_icon' />, ],
@@ -67,39 +91,39 @@ const SkillsSection = () => {
             image: block_img,
             tools: [
                 { tool: "Solidity", proeffiency: 98 },
-                { tool: "Rust", proeffiency: 90 },
+                { tool: "Rust", proeffiency: 84 },
                 { tool: "HardHat", proeffiency: 100 },
-                { tool: "Anchor", proeffiency: 95 },
+                { tool: "Anchor", proeffiency: 87 },
             ]
         },
         {
             title: "Backend",
             image: backend_img,
             tools: [
-                { tool: "Go", proeffiency: 95 },
-                { tool: "Python", proeffiency: 95 },
-                { tool: "NodeJs", proeffiency: 99 },
-                { tool: "Elixir", proeffiency: 90 },
-                { tool: "GraphQL", proeffiency: 95 },
+                { tool: "Go", proeffiency: 98 },
+                { tool: "Python", proeffiency: 93 },
+                { tool: "NodeJs", proeffiency: 100 },
+                { tool: "Elixir", proeffiency: 95 },
+                { tool: "GraphQL", proeffiency: 100 },
             ]
         },
         {
             title: "Frontend",
             image: frontend_img,
             tools: [
-                { tool: "NextJS", proeffiency: 98 },
-                { tool: "React", proeffiency: 98 },
-                { tool: "TypeScript", proeffiency: 98 },
-                { tool: "Javascript", proeffiency: 98 },
+                { tool: "NextJS", proeffiency: 100 },
+                { tool: "React", proeffiency: 100 },
+                { tool: "TypeScript", proeffiency: 95 },
+                { tool: "Javascript", proeffiency: 100 },
                 { tool: "HTML5", proeffiency: 100 },
                 { tool: "CSS3", proeffiency: 100 },
-                { tool: "WegGL", proeffiency: 95 },
+                { tool: "WegGL", proeffiency: 96 },
                 { tool: "Three JS", proeffiency: 95 },
-                { tool: "Babylon JS", proeffiency: 80 },
+                { tool: "Babylon JS", proeffiency: 90 },
                 { tool: "Jest", proeffiency: 100 },
                 { tool: "Mocha", proeffiency: 100 },
                 { tool: "Material UI", proeffiency: 100 },
-                { tool: "GraphQL", proeffiency: 95 },
+                { tool: "GraphQL", proeffiency: 100 },
             ]
         },
         {
@@ -107,8 +131,8 @@ const SkillsSection = () => {
             image: mobile_img,
             tools: [
                 { tool: "Flutter", proeffiency: 100 },
-                { tool: "React Native", proeffiency: 95 },
-                { tool: "SwiftUI", proeffiency: 80 },
+                { tool: "React Native", proeffiency: 99 },
+                { tool: "SwiftUI", proeffiency: 97 },
                 { tool: "Swift", proeffiency: 93 },
             ]
         },
@@ -116,10 +140,10 @@ const SkillsSection = () => {
             title: "DevOps & Cloud",
             image: devops_img,
             tools: [
-                { tool: "Docker", proeffiency: 98 },
+                { tool: "Docker", proeffiency: 100 },
                 { tool: "AWS", proeffiency: 90 },
                 { tool: "Git", proeffiency: 100 },
-                { tool: "Firebase", proeffiency: 98 },
+                { tool: "Firebase", proeffiency: 100 },
             ]
         }
     ]
@@ -143,14 +167,20 @@ const SkillsSection = () => {
                             <div className='skills_section_skills'>
 
                             {
-                                tools?.map(({tool}, toolIndex)=> {
+                                tools?.map(({tool, proeffiency}, toolIndex)=> {
 
                                     return (
                                         <div key={tool} className={`skills_section__card su_${toolIndex+10}`}>
                                             
-                                            { toolIcons.get(tool) }
+                                            <div className='skills_section__card_proeffiency'>
+                                                <CircularProgressWithLabel variant="determinate" size={48} value={proeffiency} />
+                                            </div>
 
-                                            <p>
+                                            <div className='skills_section__card_icon'>
+                                                { toolIcons.get(tool) }
+                                            </div>
+
+                                            <p className='skills_section__card__tool'>
                                                 {tool}
                                             </p>
 
