@@ -1,0 +1,72 @@
+@import '../../styles/commons';
+
+
+
+.projects__container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    
+    // background: linear-gradient(
+    //     rgba(255, 255, 255, .0),
+    //     rgba(255, 255, 255, .6),
+    //     rgba(255, 255, 255, .8),
+    //     rgba(255, 255, 255, .9),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, .9),
+    //     rgba(255, 255, 255, .8),
+    //     rgba(255, 255, 255, .6),
+    //     rgba(255, 255, 255, .0),
+    // );
+    // background: linear-gradient( 
+    //     to bottom, 
+    //     rgba(13, 40, 64, 0),
+    //     rgba(13, 40, 64, .8),
+    //     rgba(13, 40, 64, 1),
+    //     rgba(13, 40, 64, .8),
+    //     rgba(13, 40, 64, 0),
+    // );
+    // background-color: $TERTIARY_ALT_COLOR;
+    background: linear-gradient(
+        130deg,
+        rgba($SECONDARY_COLOR, .3),
+        rgba($PRIMARY_COLOR, .3),
+    );
+
+    border-radius: 1rem;
+}
+
+
+.projects__container__project_list {
+    position: relative;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat( auto-fit, minmax( 320px, 1fr ) );
+}
+
+
+.projects__container__chip_list__chip__outlined {
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+
+    background-color: $BLACK_COLOR;
+    border: none;
+    color: $WHITE_COLOR;
+}
+.projects__container__chip_list__chip {
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+
+    border: 1px solid $BLACK_COLOR;
+    color: $BLACK_COLOR;
+}
