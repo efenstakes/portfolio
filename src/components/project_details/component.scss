@@ -1,0 +1,27 @@
+@import "../../styles/commons";
+
+.project_details_container {
+    max-width: 560px;
+    width: 100%;
+    padding: 2rem 1rem;
+
+
+    @media screen and (min-width: 1200px) {
+        width: 640px;
+    }
+}
+
+
+.project_details_container__title {
+    text-align: center;
+}
+
+.project_details_container__image {
+    width: 100%;
+    aspect-ratio: 3 / 1.8;
+    border-radius: $BORDER_RADIUS_SM;
+}
+
+.project_details_container__tags {
+    gap: .3rem .5rem;
+}
