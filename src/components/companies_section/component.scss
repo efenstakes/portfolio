@@ -1,0 +1,48 @@
+@import '../../styles/commons';
+
+
+
+.companies_container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    color: $BLACK_COLOR;
+
+    // background: linear-gradient(
+    //     rgba(255, 255, 255, .0),
+    //     rgba(255, 255, 255, .6),
+    //     rgba(255, 255, 255, .8),
+    //     rgba(255, 255, 255, .9),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, 1),
+    //     rgba(255, 255, 255, .9),
+    //     rgba(255, 255, 255, .8),
+    //     rgba(255, 255, 255, .6),
+    //     rgba(255, 255, 255, .0),
+    // );
+    // background: linear-gradient( 
+    //     to bottom, 
+    //     transparent,
+    //     rgba(13, 40, 64, .3),
+    //     rgba(13, 40, 64, .5),
+    //     rgba(13, 40, 64, .7),
+    //     rgba(13, 40, 64, .8),
+    //     rgba(13, 40, 64, .7),
+    //     rgba(13, 40, 64, .5),
+    //     rgba(13, 40, 64, .3),
+    //     transparent
+    // );
+}
+
+.companies_list {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 240px, 1fr ) );
+    gap: 2rem;
+}
