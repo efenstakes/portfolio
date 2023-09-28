@@ -329,6 +329,7 @@ const ProjectsSection = () => {
 
                         return (
                             <div
+                                key={index}
                                 onClick={ ()=> setSelectedProject(project) }
                             >
                                 <ProjectCard
