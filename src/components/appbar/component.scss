@@ -1,0 +1,29 @@
+@import '../../styles/commons';
+
+
+
+.appbar_md {
+    // background-color: $WHITE_COLOR;
+    background: linear-gradient(
+        $WHITE_COLOR,
+        rgba(255, 255, 255, .5),
+        transparent
+    );
+    backdrop-filter: blur(2px);
+    z-index: 200;
+}
+
+.appbar_action {
+    @extend .appbar_action;
+    margin: 0 2rem;
+
+    @media screen and (max-width: 600px) {
+        margin: 0 1.2rem;
+    }
+}
+
+.appbar__title {
+    // color: #0ed1e8;
+    color: $SECONDARY_COLOR;
+    font-family: 'Oswald';
+}
