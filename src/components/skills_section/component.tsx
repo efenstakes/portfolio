@@ -52,39 +52,40 @@ function CircularProgressWithLabel(
 
   
 const SkillsSection = () => {
-    const toolIcons = new Map<string, React.ReactNode>([
-        [ "Solidity", <SiSolidity className='skill_icon' />, ],
-        [ "Rust", <SiRust className='skill_icon' /> ],
-        [ "HardHat", <FaHardHat className='skill_icon' /> ],
-        [ "Anchor", <BiAnchor className='skill_icon' /> ],
-        [ "Go", <TbBrandGolang className='skill_icon' />, ],
-        [ "NodeJs", <TbBrandNodejs className='skill_icon' /> ],
-        [ "Elixir", <SiElixir  className='skill_icon'/> ],
-        [ "Python", <BiLogoPython className='skill_icon' /> ],
-        [ "NextJS", <TbBrandNextjs className='skill_icon' /> ],
-        [ "React", <BiLogoReact className='skill_icon' /> ],
-        [ "Material UI", <BiLogoReact className='skill_icon' /> ],
-        [ "Jest, Chai", <SiChai className='skill_icon'/> ],
-        [ "Mocha", <SiMocha className='skill_icon' /> ],
-        [ "Jest", <SiMocha className='skill_icon' /> ],
-        [ "GraphQL", <SiGraphql className='skill_icon' /> ],
-        [ "Webrtc", <SiWebrtc className='skill_icon' /> ],
-        [ "TypeScript", <SiTypescript className='skill_icon' /> ],
-        [ "Javascript", <BiLogoJavascript className='skill_icon' /> ],
-        [ "HTML5", <AiFillHtml5 className='skill_icon' /> ],
-        [ "CSS3", <BiLogoCss3 className='skill_icon' /> ],
-        [ "WegGL", <TbBrandThreejs className='skill_icon' /> ],
-        [ "Three JS", <TbBrandThreejs className='skill_icon' /> ],
-        [ "Babylon JS", <SiBabylondotjs className='skill_icon' /> ],
-        [ "Flutter", <SiFlutter className='skill_icon' /> ],
-        [ "React Native", <TbBrandReactNative className='skill_icon' /> ],
-        [ "Swift", <SiSwift className='skill_icon' /> ],
-        [ "SwiftUI", <SiSwift className='skill_icon' /> ],
-        [ "Docker", <SiDocker className='skill_icon' /> ],
-        [ "AWS", <FaAws className='skill_icon' /> ],
-        [ "Git", <FaGitAlt className='skill_icon' /> ],
-        [ "Firebase", <SiFirebase className='skill_icon' /> ],
-    ])
+
+    const toolIcons = {
+         "Solidity": <SiSolidity className='skill_icon' />,
+         "Rust": <SiRust className='skill_icon' /> ,
+         "HardHat": <FaHardHat className='skill_icon' /> ,
+         "Anchor": <BiAnchor className='skill_icon' /> ,
+         "Go": <TbBrandGolang className='skill_icon' />,
+         "NodeJs": <TbBrandNodejs className='skill_icon' /> ,
+         "Elixir": <SiElixir  className='skill_icon'/> ,
+         "Python": <BiLogoPython className='skill_icon' /> ,
+         "NextJS": <TbBrandNextjs className='skill_icon' /> ,
+         "React": <BiLogoReact className='skill_icon' /> ,
+         "Material UI": <BiLogoReact className='skill_icon' /> ,
+         "Jest, Chai": <SiChai className='skill_icon'/> ,
+         "Mocha": <SiMocha className='skill_icon' /> ,
+         "Jest": <SiMocha className='skill_icon' /> ,
+         "GraphQL": <SiGraphql className='skill_icon' /> ,
+         "Webrtc": <SiWebrtc className='skill_icon' /> ,
+         "TypeScript": <SiTypescript className='skill_icon' /> ,
+         "Javascript": <BiLogoJavascript className='skill_icon' /> ,
+         "HTML5": <AiFillHtml5 className='skill_icon' /> ,
+         "CSS3": <BiLogoCss3 className='skill_icon' /> ,
+         "WegGL": <TbBrandThreejs className='skill_icon' /> ,
+         "Three JS": <TbBrandThreejs className='skill_icon' /> ,
+         "Babylon JS": <SiBabylondotjs className='skill_icon' /> ,
+         "Flutter": <SiFlutter className='skill_icon' /> ,
+         "React Native": <TbBrandReactNative className='skill_icon' /> ,
+         "Swift": <SiSwift className='skill_icon' /> ,
+         "SwiftUI": <SiSwift className='skill_icon' /> ,
+         "Docker": <SiDocker className='skill_icon' /> ,
+         "AWS": <FaAws className='skill_icon' /> ,
+         "Git": <FaGitAlt className='skill_icon' /> ,
+         "Firebase": <SiFirebase className='skill_icon' />,
+    }
     const skills: Array<Skill> = [
         {
             title: "Blockchain",
@@ -157,7 +158,7 @@ const SkillsSection = () => {
                 skills.map(({ title, tools }, index: number)=> {
 
                     return (
-                        <div  key={index} className='skills_section'>
+                        <div key={index} className='skills_section'>
 
                             <h1 className="title_7 su_10 skills_section__title">
                                 {title}
@@ -177,7 +178,7 @@ const SkillsSection = () => {
                                             </div>
 
                                             <div className='skills_section__card_icon'>
-                                                { toolIcons.get(tool) }
+                                                { new Map(Object.entries(toolIcons)).get(tool) }
                                             </div>
 
                                             <p className='skills_section__card__tool'>
