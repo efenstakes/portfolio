@@ -52,6 +52,10 @@ const Welcome = ({ scrollToCompanies, }: WelcomeProps) => {
                 IDEAS INTO PRODUCTS
             </p>
             <VSpacer space={.5} />
+{/* 
+            <p className='welcome__description'>
+                I am an experienced and passionate frontend engineer, I have had the honor of working with top-tier companies such as Microsoft AppFactory, KLM Dutch Airlines, SkillCat, and currently The Arena Group. I bring a wealth of expertise in developing, testing, and maintaining web platforms that are both scalable and capable of serving millions of users. Throughout my career, I have had the opportunity to work on high-traffic financial, sports and fashion platforms, including Sports Illustrated, TheStreet, Parade, and Fashionista, each of which receives millions of daily visitors. I have experience using react, nextjs, typescript, javascript, html5, css3 among other tools.
+            </p> */}
 
             {/* name */}
             <p className="welcome__text text_7 su_9 welcome__my_name">

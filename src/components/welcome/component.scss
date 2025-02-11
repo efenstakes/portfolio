@@ -7,14 +7,14 @@
     top: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
 
     // background-color: pink;
-    background: linear-gradient(
-        130deg,
-        rgba($PRIMARY_COLOR, .9),
-        rgba($SECONDARY_COLOR, .9),
-    );
+    // background: linear-gradient(
+    //     130deg,
+    //     rgba($PRIMARY_COLOR, .9),
+    //     rgba($SECONDARY_COLOR, .9),
+    // );
 
     z-index: -1;
 
@@ -25,7 +25,9 @@
 .welcome {
     // margin-top: -1rem;
     // background-color: pink;
-    color: white;
+    // color: white;
+
+    color: #1e1e1e;
 
     position: relative;
 
@@ -50,22 +52,27 @@
     //     // lightgrey,
     //     transparent
     // );
-    background-image: linear-gradient( 
-        to bottom, 
-        transparent,
-        rgba(13, 40, 64, .3),
-        rgba(13, 40, 64, .5),
-        rgba(13, 40, 64, .7),
-        rgba(13, 40, 64, .8),
-        rgba(13, 40, 64, .7),
-        rgba(13, 40, 64, .5),
-        rgba(13, 40, 64, .3),
-        transparent
-    );
+    // background-image: linear-gradient( 
+    //     to bottom, 
+    //     transparent,
+    //     rgba(13, 40, 64, .3),
+    //     rgba(13, 40, 64, .5),
+    //     rgba(13, 40, 64, .7),
+    //     rgba(13, 40, 64, .8),
+    //     rgba(13, 40, 64, .7),
+    //     rgba(13, 40, 64, .5),
+    //     rgba(13, 40, 64, .3),
+    //     transparent
+    // );
 }
 
 .welcome__text {
     font-family: 'Oswald';
+}
+
+.welcome__description {
+    max-width: 720px;
+    text-align: center;
 }
 
 .welcome__my_name {
@@ -92,7 +99,6 @@
     box-shadow: 0px 2px 6px 6px #e6e6e6;
 
     
-
     &:hover {
         transform: scale(1.1);
         z-index: 200;
@@ -118,9 +124,10 @@
     font-size: 6.4rem;
     font-weight: 900;
     // color: lightgrey;
-    color: rgba($WHITE_COLOR, .9);
+    // color: rgba($WHITE_COLOR, .9);
+    color: rgba($SECONDARY_COLOR, .9);
 
-    text-shadow: 0px 0px 12px grey;
+    text-shadow: 0px 0px 12px rgba($PRIMARY_COLOR, .6);
     
     z-index: 1;
 
@@ -131,7 +138,7 @@
 }
 
 .welcome__side_icon {
-    color: $PRIMARY_COLOR;
+    color: whitesmoke;
 }
 
 .welcome__side_go_down {
@@ -141,8 +148,9 @@
 
     border-radius: 50%;
 
-    background-color: $WHITE_COLOR;
-    color: $BLACK_COLOR;
+    background-color: $PRIMARY_COLOR;
+    color: whitesmoke;
+    box-shadow: 0px 0px 10px rgba($PRIMARY_COLOR, .6);
 
     cursor: pointer;
     
