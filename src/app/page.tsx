@@ -12,6 +12,7 @@ import ProjectsSection from "@/components/projects_section/component";
 import SectionTitle from "@/components/section_title/component";
 import SkillsSection from "@/components/skills_section/component";
 import ContactSection from "@/components/contact_section/component";
+import About from "@/components/about/component";
 
 export default function Home() {
   const width = useWindowWidth()
@@ -32,15 +33,21 @@ export default function Home() {
       
       
       <div className='home_page__content'>
-        <VSpacer space={ isMobile ? 4 : 0 } />
+        {/* <VSpacer space={ isMobile ? 4 : 0 } /> */}
 
         {/* welcome */}
         <div className='welcome__scroll_to' ref={welcomeScrollToRef} />
         <Welcome scrollToCompanies={scrollToCompanies} />
+        <VSpacer space={12} />
+
+        {/* about */}
+        <div className='companies__scroll_to' ref={companiesScrollToRef} />
+        {/* <SectionTitle title="SKILLS" />
+        <VSpacer space={2} /> */}
+        <About />
         <VSpacer space={8} />
         
         {/* companies */}
-        <div className='companies__scroll_to' ref={companiesScrollToRef} />
         <CompaniesSection />
         <VSpacer space={8} />
 
