@@ -47,6 +47,11 @@ const goCyberImg = '/assets/images/cyber.png'
 const glitchImg = '/assets/images/glitch.png'
 const videoCallerImg = '/assets/images/video-caller.jpg'
 const awsLambdaImg = '/assets/images/aws-lambda.png'
+const langchainImg = '/assets/images/langchain.jpeg'
+const autoSpotImg = '/assets/images/auto-spot.png'
+const yodaFlutterImg = '/assets/images/yoda-ai-flutter.png'
+const yodaIosImg = '/assets/images/yoda-ai-ios.png'
+const yodaCliImg = '/assets/images/yoda-ai-cli.png'
 const ProjectsSection = () => {
     const width = useWindowWidth()
     const isMobile = width < 1000
@@ -56,14 +61,64 @@ const ProjectsSection = () => {
 
 
     const filters: Array<string> = [
-        'Web', 'Backend', '3D / WelGL', 'Mobile', 'Web3',
+        "AI", 'Web', 'Backend', '3D / WelGL', 'Mobile', 'Web3',
     ]
     const projects: Array<Project> = [
+        {
+            name: "Auto Spot",
+            img: autoSpotImg,
+            description: "Autospot254 is an ecommerce website for a local business that is looking to sell auto parts in the region.",
+            tags: [ "NodeJS", "ExpressJS", "TypeScript", "Web", "GraphQL", "React", "WebGL", "JavaScript", "API", "AWS", "Github Actions", 'NextJS', 'ReactJS', ],
+            gitLink: "https://github.com/efenstakes/auto-spot-ui",
+            link: "https://autospot254.co.ke/",
+        },
+        {
+            name: "Yoda AI (Python API)",
+            img: langchainImg,
+            description: "Yoda AI, your ultimate AI companion! Yoda is designed to be your go-to solution for a wide range of tasks, from answering questions and providing insights to offering assistance and entertainment.",
+            tags: [ "Python", "FastAPI", "TypeScript", "Web", "AI", "API", "Langchain", ],
+            gitLink: "https://github.com/efenstakes/yoda-ai-python",
+        },
+        {
+            name: "Yoda AI (NodeJS API)",
+            img: langchainImg,
+            description: "Yoda AI, your ultimate AI companion! Yoda is designed to be your go-to solution for a wide range of tasks, from answering questions and providing insights to offering assistance and entertainment.",
+            tags: [ "NodeJS", "TypeScript", "JavaScript", "Web", "AI", "API", "Langchain", ],
+            gitLink: "https://github.com/efenstakes/yoda-ai-nodejs"
+        },
+        {
+            name: "Yoda AI (Go/GoLang API)",
+            img: langchainImg,
+            description: "Yoda AI, your ultimate AI companion! Yoda is designed to be your go-to solution for a wide range of tasks, from answering questions and providing insights to offering assistance and entertainment.",
+            tags: [ "Go/GoLang", "gin", "Web", "AI", "API", "Langchain", ],
+            gitLink: "https://github.com/efenstakes/yoda-ai-golang"
+        },
+        {
+            name: "Yoda AI CLI",
+            img: yodaCliImg,
+            description: "Yoda AI, your ultimate AI companion! Yoda is designed to be your go-to solution for a wide range of tasks, from answering questions and providing insights to offering assistance and entertainment.",
+            tags: [ "Python", "Web", "AI", "API", "Langchain", ],
+            gitLink: "https://github.com/efenstakes/yoda-ai-cli"
+        },
+        {
+            name: "Yoda AI Mobile App",
+            img: yodaFlutterImg,
+            description: "Yoda AI, your ultimate AI companion! Yoda is designed to be your go-to solution for a wide range of tasks, from answering questions and providing insights to offering assistance and entertainment.",
+            tags: [ "Mobile", "Flutter", "RestAPI", "Provider", "AI", "Langchain", ],
+            gitLink: "https://github.com/efenstakes/yoda-ai-flutter"
+        },
+        {
+            name: "Yoda AI iOS App",
+            img: yodaIosImg,
+            description: "Yoda AI, your ultimate AI companion! Yoda is designed to be your go-to solution for a wide range of tasks, from answering questions and providing insights to offering assistance and entertainment.",
+            tags: [ "Mobile", "Flutter", "RestAPI", "MVVM", "Async / Await", "AI" ],
+            gitLink: "https://github.com/efenstakes/yoda-ai-swift"
+        },
         {
             name: "Ashley\'s Furniture",
             img: ashleysImg,
             description: "Ashley\'s Furniture 3D concept site",
-            tags: [ "NextJS", "ReactJS", "TypeScript", "JavaScript", "3D", "Threejs", "Webgl", "Web" ],
+            tags: [ "NextJS", "ReactJS", "TypeScript", "JavaScript", "3D", "Threejs", "Webgl", "Web", ],
             link: "https://ashleys-8a17b.web.app/",
             gitLink: "https://github.com/efenstakes/ashleys"
         },
@@ -239,7 +294,7 @@ const ProjectsSection = () => {
         })
         setOnDisplay(newDisplay)
     }, [ ])
-
+    
     useEffect(()=> {
         let newDisplay = projects.filter(p=> {
             if( selectedFilter === "Web" ) {
